@@ -1,13 +1,15 @@
-var feedbackopen = document.querySelector(".js-btn");
-var feedbackclose = document.querySelector(".js-close");
-var feedbackquery = document.querySelector(".dialog");
+'use strict';
 
-feedbackclose.addEventListener("click", function (event) {
-  event.preventDefault();
-	feedbackquery.classList.remove(".dialog.dialog--close");
-});
+function readyScroll() {
+  window.scrollTo(0 , document.body.scrollHeight);
+  document.body.style.overflow = 'hidden';
+}
 
-feedbackopen.addEventListener("click", function (event) {
-	event.preventDefault();
-	feedbackquery.classList.add(".dialog.dialog--open");
-});
+function startFirstLevel() {
+  window.scrollBy(0, - document.body.clientHeight);
+}
+
+document.addEventListener('DOMContentLoaded', readyScroll);
+
+let playBtn = document.getElementsByClassName('js-play');
+playBtn.addEventListener('click', startFirstLevel);
