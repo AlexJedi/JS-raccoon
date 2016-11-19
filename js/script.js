@@ -20,32 +20,32 @@ function addClick(elementId, func) {
     elem.addEventListener('click', func);
 }
 
-function startFirstLevel() {
-    levelScroll();
-}
-
 document.addEventListener('DOMContentLoaded', readyScroll);
 
-addClick('js-play', startFirstLevel);
+addClick('js-play', levelScroll);
 addClick('js-back', readyScroll);
 
 let timeCounter = document.getElementById('js-time'),
-    timeCounterBlock = timeCounter.parentElement;
+    timeCounterBlock = timeCounter.parentElement,
+    bgCloud = document.getElementById('js-cloud'),
+    bgStar = document.getElementById('js-star');
 
 function clearField() {
     let timer = 2,
         timerId = setInterval(function() {
-            timeCounter.innerHTML = timer;
-            if (timer == -1) {
+            if (timer < 0) {
               clearInterval(timerId);
               timeCounterBlock.style.display = 'none';
             }
+            timeCounter.innerHTML = timer;
             timer--;
         }, 700);
+    let cloudOpacity = 0.8,
+        cloudTimerId = setInterval(function() {
+      if (cloudOpacity < 0) clearInterval(cloudTimerId);
+      bgCloud.style.opacity = cloudOpacity;
+      cloudOpacity -= 0.2;
+    }, 6000);
 }
 clearField();
-
-let canvas = document.getElementById("canvas"),
-    ctx = canvas.getContext("2d");
-canvas.width = document.body.clientWidth;
-canvas.height = document.body.clientHeight;
+bgStar.classList.add('star--active');
