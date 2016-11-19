@@ -59,8 +59,6 @@ a{
     display: flex;
     flex-direction: column;
 }
-.btn--play:hover {}
-.btn--play:active {}
 
 .title{
   display: inline-block;
@@ -86,7 +84,7 @@ a{
     margin-bottom: 20px;
       flex:1;
 }
-.star, .cloud, .raccoon {
+.star, .cloud, .cloud--active, .raccoon {
     position: absolute;
     top: 0;
     left: 0;
@@ -95,11 +93,21 @@ a{
     width: 100%;
     height: 100%;
     display: block;
+    opacity: 1;
 }
 .star {
     background: transparent url(img/stars.png) repeat top center;
     z-index: 0;
 }
+
+.star--active{
+  -moz-animation: move-star-back 200s linear infinite;
+  -ms-animation: move-star-back 200s linear infinite;
+  -o-animation: move-star-back 200s linear infinite;
+  -webkit-animation: move-star-back 200s linear infinite;
+  animation: move-star-back 200s linear infinite;
+}
+
 .cloud {
     background: transparent url(img/clouds1.png) repeat top center;
     z-index: 3;
@@ -109,6 +117,7 @@ a{
     -webkit-animation: move-clouds-back 200s linear infinite;
     animation: move-clouds-back 200s linear infinite;
 }
+
 .word {
     position: absolute;
     top: 0;
@@ -119,6 +128,7 @@ a{
     z-index: 0;
 }
 
+<<<<<<< HEAD
 canvas {
     position: absolute;
     top:0;
@@ -129,24 +139,8 @@ canvas {
     background: transparent;
 }
 
-.btn--back {
-    position: absolute;
-    top: 2%;
-    right: 1%;
-    background: transparent url(img/Arrow-Down.png) no-repeat top right;
-    opacity: 0.5;
-    width: 50px;
-    height: 50px;
-    z-index: 100;
-    display: block;
-    cursor: pointer;
-}
-
-.btn--back:hover {
-    opacity: 1;
-}
-
-.fixed {
+=======
+.fixed-bottom {
     position: fixed;
     display: flex;
     width: 100%;
@@ -155,6 +149,57 @@ canvas {
     left: 0;
     background: transparent;
 }
+
+.fixed-top {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    min-height: 10vh;
+    top: 0;
+    left: 0;
+    background: transparent;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+>>>>>>> refs/heads/pr/3
+.btn--back {
+    flex: 1;
+    padding-right: 2%;
+    background: transparent url(img/Arrow-Down.png) no-repeat right;
+    opacity: 0.5;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    display: block;
+    cursor: pointer;
+    margin-right: 1%;
+}
+
+.btn--back:hover, .btn--back:active {
+    opacity: 1;
+}
+
+.btn--musicon{
+  flex: 1;
+  padding-left: 2%;
+  width: 50px;
+  height: 50px;
+  background: transparent url(img/musicon.png) no-repeat;
+  cursor: pointer;
+  opacity: 0.5;
+  z-index: 100;
+  margin-left: 1%;
+}
+
+.btn--musicon:hover, .btn--musicon:active{
+  opacity: 1;
+}
+
+.musicon--active{
+  background: transparent url(img/musicoff.png) no-repeat;
+}
+
 .life {
     flex: 1;
     text-align: left;
@@ -529,6 +574,41 @@ canvas {
     }
     to {
         background-position: 10000px 0;
+    }
+}
+
+
+
+@keyframes move-star-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 10000px;
+    }
+}
+@-webkit-keyframes move-star-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 10000px;
+    }
+}
+@-moz-keyframes move-star-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 10000px;
+    }
+}
+@-ms-keyframes move-star-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 10000px;
     }
 }
 
