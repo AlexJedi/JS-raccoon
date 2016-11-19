@@ -5,11 +5,21 @@ function readyScroll() {
   document.body.style.overflow = 'hidden';
 }
 
+function getCoordY(elem) {
+  let box = elem.getBoundingClientRect();
+  return box.top + pageYOffset;
+}
+
+function levelScroll() {
+  let lvl = document.getElementsById('firstlvl');
+  window.scrollTo(0 , getCoordY(lvl));
+}
+
 function startFirstLevel() {
-  window.scrollBy(0, - document.body.clientHeight);
+  levelScroll();
 }
 
 document.addEventListener('DOMContentLoaded', readyScroll);
 
-let playBtn = document.getElementsByClassName('js-play');
+let playBtn = document.getElementById('js-play');
 playBtn.addEventListener('click', startFirstLevel);
