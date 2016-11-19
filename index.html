@@ -8,11 +8,10 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-  <script src="test.js"></script>
 </head>
 <body>
 
-  <section class="game-space--first-lvl"  id="#1lvl">
+  <section class="game-space--first-lvl"  id="firstlvl">
     <div class="game-space__block--start">
       <div class="game-space__level">TIME TO START<span class="js-level"> 00</span></div>
     </div>
@@ -23,7 +22,9 @@
     <div class="game-space__interactive">
       <div class="game-space__dropdown js-dropdown"></div>
     </div>
-    <canvas id="canvas"></canvas>
+    <canvas id="canvas">
+      Your browser does not support canvas. Please try again with a different browser.
+    </canvas>
   </section>
 
 
@@ -40,7 +41,7 @@
       <!-- <div class="game-space__subtitle">find yourself at js coding via gaming!</div> -->
       <!-- <div class="game-space__level">YOUR LEVEL<span class="js-lvl"> 1</span></div> -->
       <div class="game-space__btn">
-        <div class="game-space__btn--play"><a class="js-play" href="#">PLAY</a></div>
+        <div class="game-space__btn--play"><a id="js-play" href="#">PLAY</a></div>
         <div class="game-space__btn--line"></div>
         <div class="game-space__btn--info"><a class="js-info" href="#">INFO</a></div>
       </div>
