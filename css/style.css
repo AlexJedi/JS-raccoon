@@ -23,52 +23,6 @@ a{
 
 }
 
-.game-space--fifth-lvl {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background: -webkit-linear-gradient(#000 10%, #9b2126 90%);
-    background: -moz-linear-gradient(#000 10%, #9b2126 90%);
-    background: -ms-linear-gradient(#000 10%, #9b2126 90%);
-    background: -o-linear-gradient(#000 10%, #9b2126 90%);
-    background: linear-gradient(#000 10%, #9b2126 90%);
-}
-
-
-
-.game-space--fourth-lvl {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background: -webkit-linear-gradient(#9b2126 10%, #000 90%);
-    background: -moz-linear-gradient(#9b2126 10%, #000 90%);
-    background: -ms-linear-gradient(#9b2126 10%, #000 90%);
-    background: -o-linear-gradient(#9b2126 10%, #000 90%);
-    background: linear-gradient(#9b2126 10%, #000 90%);
-}
-
-.game-space--third-lvl {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background: -webkit-linear-gradient(#000 10%, #0e0505 90%);
-    background: -moz-linear-gradient(#000 10%, #0e0505 90%);
-    background: -ms-linear-gradient(#000 10%, #0e0505 90%);
-    background: -o-linear-gradient(#000 10%, #0e0505 90%);
-    background: linear-gradient(#000 10%, #0e0505 90%);
-}
-
-.game-space--second-lvl {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background: -webkit-linear-gradient(#0e0505 10%, #480048 90%);
-    background: -moz-linear-gradient(#0e0505 10%, #480048 90%);
-    background: -ms-linear-gradient(#0e0505 10%, #480048 90%);
-    background: -o-linear-gradient(#0e0505 10%, #480048 90%);
-    background: linear-gradient(#0e0505 10%, #480048 90%);
-}
-
 .game-space--first-lvl {
     position: relative;
     height: 100vh;
