@@ -101,11 +101,11 @@ a{
 }
 
 .star--active{
-  -moz-animation: move-star-back 160s linear infinite;
-  -ms-animation: move-star-back 160s linear infinite;
-  -o-animation: move-star-back 160s linear infinite;
-  -webkit-animation: move-star-back 160s linear infinite;
-  animation: move-star-back 160s linear infinite;
+  -moz-animation: move-star-back 120s linear infinite;
+  -ms-animation: move-star-back 120s linear infinite;
+  -o-animation: move-star-back 120s linear infinite;
+  -webkit-animation: move-star-back 120s linear infinite;
+  animation: move-star-back 120s linear infinite;
 }
 
 .cloud {
@@ -131,14 +131,14 @@ a{
 .raccoon {
     background: transparent url(img/raccoon.png) no-repeat;
     background-size: contain;
-    width: 25%;
-    height: 25%;
+    width: 20vh;
+    height: 25vh;
     position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-20%);
-
 }
+
 
 .fixed-bottom {
     position: fixed;
