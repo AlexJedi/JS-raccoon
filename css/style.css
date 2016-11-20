@@ -101,11 +101,11 @@ a{
 }
 
 .star--active{
-  -moz-animation: move-star-back 160s linear infinite;
-  -ms-animation: move-star-back 160s linear infinite;
-  -o-animation: move-star-back 160s linear infinite;
-  -webkit-animation: move-star-back 160s linear infinite;
-  animation: move-star-back 160s linear infinite;
+  -moz-animation: move-star-back 120s linear infinite;
+  -ms-animation: move-star-back 120s linear infinite;
+  -o-animation: move-star-back 120s linear infinite;
+  -webkit-animation: move-star-back 120s linear infinite;
+  animation: move-star-back 120s linear infinite;
 }
 
 .cloud {
@@ -131,13 +131,14 @@ a{
 .raccoon {
     background: transparent url(img/raccoon.png) no-repeat;
     background-size: contain;
-    width: 25%;
-    height: 25%;
+    width: 20vh;
+    height: 25vh;
     position: absolute;
     bottom: 10%;
     left: 50vw;
     transform: translateX(-50%);
 }
+
 
 .fixed-bottom {
     position: fixed;
@@ -484,11 +485,13 @@ a{
 	opacity: 0;
 	transition: opacity 0.3s;
   z-index: 500;
+    visibility: hidden;
 }
 
 .modal--open .modal-overlay {
 	opacity: 1;
 	pointer-events: auto;
+  visibility: visible;
 }
 
 .modal-content {
@@ -503,6 +506,7 @@ a{
 	position: relative;
 	z-index: 1000;
 	opacity: 0;
+    visibility: hidden;
 }
 
 .modal--open .modal-content {
@@ -565,10 +569,12 @@ a{
 
 .modal .modal--open .modal-content {
 	animation-name: anim-open;
+  visibility: visible;
 }
 
 .modal .modal--close .modal-content {
 	animation-name: anim-close;
+  visibility: hidden;
 }
 
 @keyframes anim-open {

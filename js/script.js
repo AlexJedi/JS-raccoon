@@ -34,18 +34,18 @@ function clearField() {
     let timer = 2,
         timerId = setInterval(function() {
             if (timer < 0) {
-              clearInterval(timerId);
-              timeCounterBlock.style.display = 'none';
+                clearInterval(timerId);
+                timeCounterBlock.style.display = 'none';
             }
             timeCounter.innerHTML = timer;
             timer--;
         }, 700);
     let cloudOpacity = 0.8,
         cloudTimerId = setInterval(function() {
-      if (cloudOpacity < 0) clearInterval(cloudTimerId);
-      bgCloud.style.opacity = cloudOpacity;
-      cloudOpacity -= 0.2;
-    }, 6000);
+            if (cloudOpacity < 0) clearInterval(cloudTimerId);
+            bgCloud.style.opacity = cloudOpacity;
+            cloudOpacity -= 0.2;
+        }, 6000);
 }
 clearField();
 bgStar.classList.add('star--active');
