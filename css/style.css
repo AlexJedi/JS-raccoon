@@ -136,7 +136,6 @@ a{
     position: absolute;
     bottom: 10%;
     left: 50vw;
-    transform: translateX(-50%);
 }
 
 
@@ -205,6 +204,21 @@ a{
     text-align: left;
     padding-left: 2%;
     letter-spacing: 10px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.aim {
+    flex: 1;
+    text-align: center;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 
@@ -212,10 +226,20 @@ a{
     flex: 1;
     text-align: right;
     padding-right: 2%;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .score span{
     margin-left: 1%;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .land {
