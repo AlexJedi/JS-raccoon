@@ -84,7 +84,7 @@ a{
     margin-bottom: 20px;
       flex:1;
 }
-.star, .cloud, .cloud--active, .raccoon {
+.star, .cloud, .cloud--active, .triangle {
     position: absolute;
     top: 0;
     left: 0;
@@ -101,16 +101,16 @@ a{
 }
 
 .star--active{
-  -moz-animation: move-star-back 200s linear infinite;
-  -ms-animation: move-star-back 200s linear infinite;
-  -o-animation: move-star-back 200s linear infinite;
-  -webkit-animation: move-star-back 200s linear infinite;
-  animation: move-star-back 200s linear infinite;
+  -moz-animation: move-star-back 160s linear infinite;
+  -ms-animation: move-star-back 160s linear infinite;
+  -o-animation: move-star-back 160s linear infinite;
+  -webkit-animation: move-star-back 160s linear infinite;
+  animation: move-star-back 160s linear infinite;
 }
 
 .cloud {
     background: transparent url(img/clouds1.png) repeat top center;
-    z-index: 3;
+    z-index: 0;
     -moz-animation: move-clouds-back 200s linear infinite;
     -ms-animation: move-clouds-back 200s linear infinite;
     -o-animation: move-clouds-back 200s linear infinite;
@@ -128,6 +128,18 @@ a{
     z-index: 0;
 }
 
+.raccoon {
+    background: transparent url(img/raccoon.png) no-repeat;
+    background-size: contain;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-20%);
+
+}
+
 .fixed-bottom {
     position: fixed;
     display: flex;
@@ -138,7 +150,7 @@ a{
     background: transparent;
 }
 
-.fixed-top {
+/*.fixed-top {
     position: fixed;
     display: flex;
     width: 100%;
@@ -148,11 +160,12 @@ a{
     background: transparent;
     align-items: flex-end;
     justify-content: space-between;
-}
+}*/
 
 .btn--back {
-    flex: 1;
-    padding-right: 2%;
+    position: absolute;
+    top:2%;
+    right:1%;
     background: transparent url(img/Arrow-Down.png) no-repeat right;
     opacity: 0.5;
     width: 50px;
@@ -160,7 +173,6 @@ a{
     z-index: 100;
     display: block;
     cursor: pointer;
-    margin-right: 1%;
 }
 
 .btn--back:hover, .btn--back:active {
@@ -168,15 +180,16 @@ a{
 }
 
 .btn--musicon{
-  flex: 1;
-  padding-left: 2%;
+  position: absolute;
+  top:2%;
+  left:1%;
   width: 50px;
   height: 50px;
   background: transparent url(img/musicon.png) no-repeat;
   cursor: pointer;
+  display: block;
   opacity: 0.5;
   z-index: 100;
-  margin-left: 1%;
 }
 
 .btn--musicon:hover, .btn--musicon:active{
@@ -279,14 +292,14 @@ a{
 }
 
 
-.raccoon{
+.triangle{
   background: transparent url(img/triangle.png) repeat top center;
   z-index: 3;
-  -moz-animation: move-raccoon-back 200s linear infinite;
-  -ms-animation: move-raccoon-back 200s linear infinite;
-  -o-animation: move-raccoon-back 200s linear infinite;
-  -webkit-animation: move-raccoon-back 200s linear infinite;
-  animation: move-raccoon-back 200s linear infinite;
+  -moz-animation: move-triangle-back 200s linear infinite;
+  -ms-animation: move-triangle-back 200s linear infinite;
+  -o-animation: move-triangle-back 200s linear infinite;
+  -webkit-animation: move-triangle-back 200s linear infinite;
+  animation: move-triangle-back 200s linear infinite;
 }
 
 
@@ -600,7 +613,7 @@ a{
 }
 
 
-@keyframes move-raccoon-back {
+@keyframes move-triangle-back {
     from {
         background-position: 0 10000px;
     }
@@ -608,7 +621,7 @@ a{
         background-position: 0 0;
     }
 }
-@-webkit-keyframes move-raccoon-back {
+@-webkit-keyframes move-triangle-back {
     from {
         background-position: 0 10000px;
     }
@@ -616,7 +629,7 @@ a{
         background-position: 0 0;
     }
 }
-@-moz-keyframes move-raccoon-back {
+@-moz-keyframes move-triangle-back {
     from {
         background-position: 0 10000px;
     }
@@ -624,7 +637,7 @@ a{
         background-position: 0 0;
     }
 }
-@-ms-keyframes move-raccoon-back {
+@-ms-keyframes move-triangle-back {
     from {
         background-position: 0 10000px;
     }
