@@ -135,13 +135,8 @@ a{
     height: 25vh;
     position: absolute;
     bottom: 10%;
-<<<<<<< HEAD
-    left: 50%;
-    transform: translateX(-20%);
-=======
     left: 50vw;
     transform: translateX(-50%);
->>>>>>> origin/master
 }
 
 
@@ -490,11 +485,13 @@ a{
 	opacity: 0;
 	transition: opacity 0.3s;
   z-index: 500;
+    visibility: hidden;
 }
 
 .modal--open .modal-overlay {
 	opacity: 1;
 	pointer-events: auto;
+  visibility: visible;
 }
 
 .modal-content {
@@ -509,6 +506,7 @@ a{
 	position: relative;
 	z-index: 1000;
 	opacity: 0;
+    visibility: hidden;
 }
 
 .modal--open .modal-content {
@@ -571,10 +569,12 @@ a{
 
 .modal .modal--open .modal-content {
 	animation-name: anim-open;
+  visibility: visible;
 }
 
 .modal .modal--close .modal-content {
 	animation-name: anim-close;
+  visibility: hidden;
 }
 
 @keyframes anim-open {
