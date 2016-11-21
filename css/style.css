@@ -136,8 +136,6 @@ a{
     position: absolute;
     bottom: 10%;
     left: 50vw;
-<<<<<<< HEAD
-=======
     z-index: 100;
 }
 
@@ -148,7 +146,6 @@ canvas {
     z-index: 0;
     width: 100%;
     height: 100%;
->>>>>>> refs/remotes/elliepooh/master
 }
 
 
